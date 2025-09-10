@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BugNest - Bug Details</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:#2c3e50; padding:1rem; }
+    .logo { color:white; font-weight:bold; }
+    nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:600px; margin:2rem auto; background:white; padding:2rem; border-radius:5px; }
+    h2 { color:#2c3e50; }
+    .label { font-weight:bold; margin-top:1rem; }
+    select, textarea { width:100%; padding:0.5rem; margin-top:0.5rem; }
+    .btn { margin-top:1rem; background:#2980b9; color:white; padding:0.7rem; border:none; border-radius:5px; cursor:pointer; }
+    .btn:hover { background:#3498db; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">🐞 BugNest</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="add-bug.html">Report Bug</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Bug #1 - Login button not working</h2>
+    <p><span class="label">Status:</span> <select><option>Open</option><option>In Progress</option><option>Resolved</option></select></p>
+    <p><span class="label">Priority:</span> High</p>
+    <p><span class="label">Description:</span> The login button doesn’t respond when clicked on mobile devices.</p>
+    <p><span class="label">Comments:</span></p>
+    <textarea rows="4" placeholder="Add a comment..."></textarea>
+    <button class="btn">Update Bug</button>
+  </div>
+</body>
+</html>

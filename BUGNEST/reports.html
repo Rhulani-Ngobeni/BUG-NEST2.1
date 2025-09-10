@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BugNest - Reports</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:#2c3e50; padding:1rem; }
+    .logo { color:white; font-weight:bold; }
+    nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:800px; margin:2rem auto; background:white; padding:2rem; border-radius:5px; }
+    h2 { color:#2c3e50; text-align:center; }
+    canvas { width:100% !important; height:400px !important; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">🐞 BugNest</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="add-bug.html">Report Bug</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Reports & Analytics</h2>
+    <canvas id="bugChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('bugChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Open', 'In Progress', 'Resolved'],
+        datasets: [{
+          label: 'Bug Count',
+          data: [5, 3, 7],
+          backgroundColor: ['#e74c3c', '#f39c12', '#27ae60']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

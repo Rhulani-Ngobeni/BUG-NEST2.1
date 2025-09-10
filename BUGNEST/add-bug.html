@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BugNest - Report Bug</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:#2c3e50; padding:1rem; }
+    .logo { color:white; font-weight:bold; }
+    nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:600px; margin:2rem auto; background:white; padding:2rem; border-radius:5px; }
+    h2 { color:#2c3e50; }
+    input, select, textarea { width:100%; padding:0.7rem; margin:0.5rem 0; border:1px solid #ccc; border-radius:4px; }
+    .btn { margin-top:1rem; background:#27ae60; color:white; padding:0.7rem; border:none; border-radius:5px; cursor:pointer; }
+    .btn:hover { background:#2ecc71; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">🐞 BugNest</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="add-bug.html">Report Bug</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Report a New Bug</h2>
+    <form>
+      <input type="text" placeholder="Bug Title" required>
+      <textarea rows="4" placeholder="Bug Description" required></textarea>
+      <select>
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button type="submit" class="btn">Submit Bug</button>
+    </form>
+  </div>
+</body>
+</html>
